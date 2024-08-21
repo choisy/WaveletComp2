@@ -75,7 +75,7 @@ function(x, start = 1, dt = 1, dj = 1/20,
   ## Compute the cone of influence COI
   ###############################################################################
 
-  coi = COI(start = start, dt = dt, nc = nc, nr = nr, Period = Period)
+  coi = COI(start = start, dt = dt, nc = nc, nr = nr, Period = Period, log2scale = log2scale)
 
   ###############################################################################
   ## Prepare the output
