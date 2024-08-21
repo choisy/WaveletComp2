@@ -20,11 +20,11 @@ function(x, dt = 1, dj = 1/20,
   min.scale = lowerPeriod/fourier.factor             # Convert lowerPeriod to minimum scale
   max.scale = upperPeriod/fourier.factor             # Convert upperPeriod to maximum scale
 
+  J = as.integer( log2(max.scale/min.scale) / dj)    # Index of maximum scale -1
   if (log2scale) {
-    J = as.integer( log2(max.scale/min.scale) / dj)    # Index of maximum scale -1
     scales = min.scale * 2^((0:J)*dj)        # sequence of scales
   } else {
-    scales <- seq(min.scale, max.scale, dj)
+    scales <- seq(min.scale, max.scale, le = J + 1)
   }
 
   scales.length = length(scales)           # J + 1
