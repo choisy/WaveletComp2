@@ -128,7 +128,7 @@ if (lowerPeriod > upperPeriod) { stop('Please choose lowerPeriod smaller than or
                 nc = my.wc$nc, nr = my.wc$nr,
                 coi.1 = my.wc$coi.1, coi.2 = my.wc$coi.2,
                 axis.1 = my.wc$axis.1, axis.2 = my.wc$axis.2,
-                date.format = date.format, date.tz = date.tz)
+                date.format = date.format, date.tz = date.tz, log2scale = log2scale)
 
 
   class(output) = "analyze.coherency"
