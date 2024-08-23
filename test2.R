@@ -33,15 +33,16 @@ my.wc_linear <- analyze.coherency(my.data, c("x","y"),
                                 date.format = "%F %T", date.tz = "", log2scale = FALSE)
 
 
-wc.image(my.wc, main = "cross-wavelet power spectrum, x over y",
+wc.image(my.wc_log2, main = "cross-wavelet power spectrum, x over y",
          legend.params = list(lab = "cross-wavelet power levels"),
          periodlab = "period (days)")
 
 
-wc.image(my.wc, main = "cross-wavelet power spectrum, x over y",
+wc.image(my.wc_linear, main = "cross-wavelet power spectrum, x over y",
          legend.params = list(lab = "cross-wavelet power levels"),
          periodlab = "period (days)", show.date = TRUE)
 
+#######################################################################################
 
 wc.avg(my.wc, siglvl = 0.05, sigcol = 'red',
        periodlab = "period (days)")
