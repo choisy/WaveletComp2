@@ -1,3 +1,5 @@
+library(WaveletComp2)
+
 series.length <- 6 * 128 * 24
 x1 <- periodic.series(start.period = 1 * 24, length = series.length)
 x2 <- periodic.series(start.period = 8 * 24, length = series.length)
