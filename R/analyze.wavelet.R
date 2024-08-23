@@ -111,7 +111,7 @@ if ( lowerPeriod > upperPeriod ) { stop('Please choose lowerPeriod smaller than 
                  nc = my.wt$nc, nr = my.wt$nr,
                  coi.1 = my.wt$coi.1, coi.2 = my.wt$coi.2,
                  axis.1 = my.wt$axis.1, axis.2 = my.wt$axis.2,
-                 date.format = date.format, date.tz = date.tz
+                 date.format = date.format, date.tz = date.tz, log2scale = log2scale
                 )
 
 

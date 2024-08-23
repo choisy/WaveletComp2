@@ -281,7 +281,7 @@ function(WT, my.series = 1, exponent = 1,
       if ( (is.null(periodlab)) | (!is.null(periodlab) & period.axis.warning) ) {periodlab='period'}
 
       if (period.axis.default) {
-        if (length(unique(round(diff(WT$Period), 10))) > 1) {
+        if (WT$log2scale) {
           period.tick = unique(trunc(axis.2))
           period.tick[period.tick<log2(WT$Period[1])] = NA
           period.tick = na.omit(period.tick)
