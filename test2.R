@@ -42,25 +42,18 @@ wc.image(my.wc_linear, main = "cross-wavelet power spectrum, x over y",
          legend.params = list(lab = "cross-wavelet power levels"),
          periodlab = "period (days)", show.date = TRUE)
 
-#######################################################################################
 
-wc.avg(my.wc, siglvl = 0.05, sigcol = 'red',
+wc.avg(my.wc_log2, siglvl = 0.05, sigcol = 'red',
+       periodlab = "period (days)")
+
+wc.avg(my.wc_linear, siglvl = 0.05, sigcol = 'red',
        periodlab = "period (days)")
 
 
-wc.image(my.wc, which.image = "wc",  main = "wavelet coherence, x over y",
-         legend.params = list(lab = "wavelet coherence levels",
-                              lab.line = 3.5, label.digits = 3),
-         periodlab = "period (days)")
-
-
-wc.avg(my.wc, which.avg = "wc",
-       siglvl = 0.05, sigcol = 'red',
-       legend.coords = "topleft",
-       periodlab = "period (days)")
-
-
-wc.phasediff.image(my.wc, which.contour = "wp",
+wc.phasediff.image(my.wc_log2, which.contour = "wp",
                    main = "image of phase differences, x over y",
                    periodlab = "period (days)")
 
+wc.phasediff.image(my.wc_linear, which.contour = "wp",
+                   main = "image of phase differences, x over y",
+                   periodlab = "period (days)")
