@@ -37,3 +37,11 @@ wt.image(my.wt_linear, color.key = "interval", main = "wavelet power spectrum",
 wt.avg(my.wt_log2, siglvl = 0.05, sigcol = "red", periodlab = "period (days)")
 
 wt.avg(my.wt_linear, siglvl = 0.05, sigcol = "red", periodlab = "period (days)")
+
+wt.phase.image(my.wt_log2,
+               main = "image of phases",
+               periodlab = "period (days)")
+
+wt.phase.image(my.wt_linear,
+               main = "image of phases",
+               periodlab = "period (days)")
